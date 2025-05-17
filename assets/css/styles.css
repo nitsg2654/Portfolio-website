@@ -291,19 +291,19 @@ img {
   z-index: var(--z-back);
 }
 .skills__html {
-  width: 60%;
+  width: 70%;
 }
 .skills__css {
   width: 50%;
 }
-.skills__js {
-  width: 40%;
-}
 .skills__sql {
-  width: 70%;
+  width: 80%;
 }
 .skills__py {
-  width: 65%;
+  width: 70%;
+}
+.skills__fl {
+  width: 60%;
 }
 .skills__img {
   border-radius: 0.5rem;
@@ -312,6 +312,10 @@ img {
 /* ===== PROJECTS =====*/
 .projects__container {
   row-gap: 2rem;
+}
+.projects__text{
+  /* margin-bottom: var(--mb-4); */
+  text-align: center;
 }
 .projects__img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
@@ -326,7 +330,7 @@ img {
 }
 
 /* ===== CONTACT ===== */
-/* .contact__input {
+.contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
@@ -334,7 +338,7 @@ img {
   border-radius: 0.5rem;
   border: 1.5px solid var(--second-color);
   outline: none;
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-1);
 }
 .contact__button {
   display: block;
@@ -343,16 +347,62 @@ img {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
-} */
-.contact__cn{
-  font-size: 1rem;
-  
 }
-
-.contact__email{
-  font-size: 1rem;
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
 }
-
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+/* Left Info Side */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  color: #333;
+}
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.contact__item a:hover {
+  text-decoration: underline;
+}
+/* Right Form Side */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+.form-row input {
+  flex: 1;
+}
+input, textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact__button:hover {
+  background-color: #058bf2;
+}
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
@@ -419,12 +469,13 @@ img {
     column-gap: 2rem;
     padding-top: 2rem;
   }
-  /* .contact__form {
+  .contact__form {
     width: 360px;
     padding-top: 2rem;
-  } */
+  }
   .contact__container {
     justify-items: center;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) {
